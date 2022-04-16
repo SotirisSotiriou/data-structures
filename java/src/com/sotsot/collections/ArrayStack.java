@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 public class ArrayStack {
     public static final int defaultCapacity = 1000;
@@ -16,6 +16,10 @@ public class ArrayStack {
         this.stack = new Object[capacity];
     }
 
+    
+    /** 
+     * @return Object
+     */
     public Object top(){
         if(isEmpty()){
             System.out.println("Stack Empty");
@@ -24,14 +28,26 @@ public class ArrayStack {
         return stack[top];
     }
 
+    
+    /** 
+     * @return int
+     */
     public int size(){
         return top+1;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isEmpty(){
         return (top < 0);
     }
 
+    
+    /** 
+     * @param o
+     */
     public void push(Object o){
         if(size() == capacity){
             System.out.println("Stack Full");
@@ -41,6 +57,10 @@ public class ArrayStack {
         stack[++top] = o;
     }
 
+    
+    /** 
+     * @return Object
+     */
     public Object pop(){
         if(isEmpty()){
             System.out.println("Stack Empty");

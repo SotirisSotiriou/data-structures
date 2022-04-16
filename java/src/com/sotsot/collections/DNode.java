@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 public class DNode {
     private DNode prev, next;
@@ -14,26 +14,50 @@ public class DNode {
         element = nodeElement;
     }
 
+    
+    /** 
+     * @return Object
+     */
     public Object getElement(){
         return element;
     }
 
+    
+    /** 
+     * @return DNode
+     */
     public DNode getPrev(){
         return prev;
     }
 
+    
+    /** 
+     * @return DNode
+     */
     public DNode getNext(){
         return next;
     }
 
+    
+    /** 
+     * @param newElement
+     */
     public void setElement(Object newElement){
         element = newElement;
     }
 
+    
+    /** 
+     * @param newPrev
+     */
     public void setPrev(DNode newPrev){
         prev = newPrev;
     }
 
+    
+    /** 
+     * @param newNext
+     */
     public void setNext(DNode newNext){
         next = newNext;
     }

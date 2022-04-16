@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 public class QueueLIFO {
     protected int size;
@@ -10,14 +10,26 @@ public class QueueLIFO {
         rear = null;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int size(){
         return size;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isEmpty(){
         return (size < 1);
     }
 
+    
+    /** 
+     * @param element
+     */
     public void enqueue(Object element){
         SNode node = new SNode(null,element);
         if(isEmpty()){
@@ -30,6 +42,10 @@ public class QueueLIFO {
         size++;
     }
 
+    
+    /** 
+     * @return SNode
+     */
     public SNode dequeue(){
         if(isEmpty()){
             System.out.println("Stack Empty");

@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 //used for SingleLinkedNodeList and LinkedStack
 public class SNode {
@@ -10,18 +10,34 @@ public class SNode {
         this.element = nodeElement;
     }
 
+    
+    /** 
+     * @return Object
+     */
     public Object getElement(){
         return this.element;
     }
 
+    
+    /** 
+     * @return SNode
+     */
     public SNode getNext(){
         return this.next;
     }
 
+    
+    /** 
+     * @param newElement
+     */
     public void setElement(Object newElement){
         this.element = newElement;
     }
 
+    
+    /** 
+     * @param newNext
+     */
     public void setNext(SNode newNext){
         this.next = newNext;
     }

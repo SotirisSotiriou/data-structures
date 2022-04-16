@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 import com.sotsot.utils.StringUtils;
 
@@ -29,38 +29,75 @@ public class BTNode implements Comparable<BTNode>{
         this.right = null;
     }
 
+    
+    /** 
+     * @return Object
+     */
     public Object getElement() {
         return element;
     }
 
+    
+    /** 
+     * @param element
+     */
     public void setElement(Object element) {
         this.element = element;
     }
 
+    
+    /** 
+     * @return BTNode
+     */
     public BTNode getLeft() {
         return left;
     }
 
+    
+    /** 
+     * @param left
+     */
     public void setLeft(BTNode left) {
         this.left = left;
     }
 
+    
+    /** 
+     * @return BTNode
+     */
     public BTNode getRight() {
         return right;
     }
 
+    
+    /** 
+     * @param right
+     */
     public void setRight(BTNode right) {
         this.right = right;
     }
 
+    
+    /** 
+     * @return BTNode
+     */
     public BTNode getParent() {
         return parent;
     }
 
+    
+    /** 
+     * @param parent
+     */
     public void setParent(BTNode parent) {
         this.parent = parent;
     }
 
+    
+    /** 
+     * @param other
+     * @return int
+     */
     @Override
     public int compareTo(BTNode other) {
         String value1 = this.getElement().toString();

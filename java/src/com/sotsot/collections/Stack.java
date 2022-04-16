@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 import java.util.ArrayList;
 
@@ -18,19 +18,35 @@ public class Stack {
         }
     }
 
+    
+    /** 
+     * @return int
+     */
     public int size(){
         return nofelements;
     }
 
+    
+    /** 
+     * @return Object
+     */
     public Object top(){
         return elements.get(nofelements-1);
     }
 
+    
+    /** 
+     * @param element
+     */
     public void push(Object element){
         elements.add(element);
         nofelements++;
     }
 
+    
+    /** 
+     * @return Object
+     */
     public Object pop(){
         Object elementToPop = elements.get(elements.size()-1);
         elements.remove(nofelements-1);

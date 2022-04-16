@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 
 public class DoubleLinkedNodeList {
@@ -37,22 +37,44 @@ public class DoubleLinkedNodeList {
 
     }
 
+    
+    /** 
+     * @return int
+     */
     public int size(){
         return nofelements;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isEmpty(){
         return (nofelements < 1);
     }
 
+    
+    /** 
+     * @param node
+     * @return boolean
+     */
     public boolean isFirst(DNode node){
         return (node.getPrev() == head);
     }
 
+    
+    /** 
+     * @param node
+     * @return boolean
+     */
     public boolean isLast(DNode node){
         return (node.getNext() == tail);
     }
 
+    
+    /** 
+     * @return DNode
+     */
     public DNode first(){
         if(isEmpty()){
             System.out.println("List is empty...");
@@ -61,6 +83,10 @@ public class DoubleLinkedNodeList {
         return (head.getNext());
     }
 
+    
+    /** 
+     * @return DNode
+     */
     public DNode last(){
         if(isEmpty()){
             System.out.println("List is empty...");
@@ -69,6 +95,11 @@ public class DoubleLinkedNodeList {
         return (tail.getPrev());
     }
 
+    
+    /** 
+     * @param index
+     * @return DNode
+     */
     public DNode getNodeAtIndex(int index){
         DNode node = head;
         int count = 0;
@@ -85,6 +116,12 @@ public class DoubleLinkedNodeList {
         return node;
     }
 
+    
+    /** 
+     * @param p
+     * @param element
+     * @return DNode
+     */
     public DNode insertBefore(DNode p, Object element){
         nofelements++;
         DNode q = new DNode();
@@ -101,6 +138,12 @@ public class DoubleLinkedNodeList {
         return q;
     }
 
+    
+    /** 
+     * @param p
+     * @param element
+     * @return DNode
+     */
     public DNode insertAfter(DNode p, Object element){
         nofelements++;
         DNode q = new DNode();
@@ -117,6 +160,11 @@ public class DoubleLinkedNodeList {
         return q;
     }
 
+    
+    /** 
+     * @param p
+     * @return DNode
+     */
     public DNode deleteNode(DNode p){
         if((p == head) || (p == tail)){
             System.out.println("Empty list...");
@@ -131,6 +179,11 @@ public class DoubleLinkedNodeList {
     }
 
 
+    
+    /** 
+     * @param index
+     * @return DNode
+     */
     public DNode deleteNodeAtIndex(int index){
         if(index > size()) return null;
         int count = 0;
@@ -146,6 +199,11 @@ public class DoubleLinkedNodeList {
         return node;
     }
 
+    
+    /** 
+     * @param p
+     * @param index
+     */
     public void addNodeAtIndex(DNode p, int index){
         if(index > size()){
             System.out.println("Index must be smaller than size...");

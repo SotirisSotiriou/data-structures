@@ -3,6 +3,11 @@ package com.sotsot.utils;
 import java.math.BigInteger;
 
 public abstract class StringUtils {
+    
+    /** 
+     * @param str
+     * @return boolean
+     */
     public static boolean isNumeric(String str){
         if(str == null) return false;
         try{
@@ -17,6 +22,11 @@ public abstract class StringUtils {
         return true;
     }
 
+    
+    /** 
+     * @param str
+     * @return boolean
+     */
     public static boolean isFloat(String str){
         if(str == null) return false;
         try{
@@ -27,6 +37,11 @@ public abstract class StringUtils {
         return true;
     }
 
+    
+    /** 
+     * @param str
+     * @return boolean
+     */
     public static boolean isInteger(String str){
         if(str == null) return false;
         try{
@@ -37,6 +52,11 @@ public abstract class StringUtils {
         return true;
     }
 
+    
+    /** 
+     * @param str
+     * @return boolean
+     */
     public static boolean isDouble(String str){
         if(str == null) return false;
         try{
@@ -47,6 +67,11 @@ public abstract class StringUtils {
         return true;
     }
 
+    
+    /** 
+     * @param str
+     * @return boolean
+     */
     public static boolean isLong(String str){
         if(str == null) return false;
         try{

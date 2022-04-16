@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 public class LinkedBinaryTree {
     private BTNode root;
@@ -20,22 +20,44 @@ public class LinkedBinaryTree {
         size = 1;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int size(){
         return size;
     }
 
+    
+    /** 
+     * @return BTNode
+     */
     public BTNode root(){
         return root;
     }
 
+    
+    /** 
+     * @param node
+     */
     public void setRoot(BTNode node){
         root = node;
     }
 
+    
+    /** 
+     * @param node
+     * @return boolean
+     */
     public boolean isRoot(BTNode node){
         return (node == root);
     }
 
+    
+    /** 
+     * @param node
+     * @return boolean
+     */
     public boolean isLeft(BTNode node){
         if(node == root){
             System.out.println("Node is root");
@@ -44,6 +66,11 @@ public class LinkedBinaryTree {
         return (node == node.getParent().getLeft());
     }
 
+    
+    /** 
+     * @param node
+     * @return boolean
+     */
     public boolean isRight(BTNode node){
         if(node == root){
             System.out.println("Node is root");
@@ -52,6 +79,10 @@ public class LinkedBinaryTree {
         return (node == node.getParent().getLeft());
     }
 
+    
+    /** 
+     * @param node
+     */
     public void addElement(BTNode node){
         BTNode current = root;
         while(true){
@@ -76,12 +107,22 @@ public class LinkedBinaryTree {
         size++;
     }
 
+    
+    /** 
+     * @param v
+     * @param w
+     */
     public void exchangeElement(BTNode v, BTNode w){
         Object temp = v.getElement();
         v.setElement(w.getElement());
         w.setElement(temp);
     }
 
+    
+    /** 
+     * @param node
+     * @return BTNode
+     */
     public BTNode getSibling(BTNode node){
         if(isRoot(node) || node == null){
             System.out.println("No sibling");
@@ -96,6 +137,10 @@ public class LinkedBinaryTree {
         }
     }
 
+    
+    /** 
+     * @param node
+     */
     public static void printLUR(BTNode node){
         if(node == null){
             return;

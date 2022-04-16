@@ -1,4 +1,4 @@
-package com.sotsot.colletions;
+package com.sotsot.collections;
 
 public class SingleLinkedNodeList {
     protected int nofelements;
@@ -9,10 +9,18 @@ public class SingleLinkedNodeList {
         head = tail = null;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int size(){
         return nofelements;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isEmpty(){
         return (nofelements < 1);
     }
@@ -22,10 +30,19 @@ public class SingleLinkedNodeList {
         head = tail = null;
     }
 
+    
+    /** 
+     * @param v
+     * @return boolean
+     */
     public boolean isFirst(SNode v){
         return v == head;
     }
 
+    
+    /** 
+     * @return SNode
+     */
     public SNode first(){
         if(isEmpty()){
             System.out.println("List is empty...");
@@ -33,6 +50,10 @@ public class SingleLinkedNodeList {
         return head;
     }
 
+    
+    /** 
+     * @return SNode
+     */
     public SNode last(){
         if(isEmpty()){
             System.out.println("List is empty...");
@@ -40,6 +61,12 @@ public class SingleLinkedNodeList {
         return tail;
     }
 
+    
+    /** 
+     * @param p
+     * @param element
+     * @return SNode
+     */
     //insert element after node p and return new node
     public SNode insertAfter(SNode p, Object element){
         if(isEmpty()){
@@ -55,6 +82,11 @@ public class SingleLinkedNodeList {
         return q;
     }
 
+    
+    /** 
+     * @param p
+     * @return SNode
+     */
     public SNode deleteAfter(SNode p){
         if(p == tail){
             System.out.println("Last element has not next...");
@@ -70,6 +102,10 @@ public class SingleLinkedNodeList {
         return pNext;
     }
 
+    
+    /** 
+     * @param s
+     */
     //catenate 2 SinglyNodeLists
     public void catenate(SingleLinkedNodeList s){
         if(s.isEmpty()){
